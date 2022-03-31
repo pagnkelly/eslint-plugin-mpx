@@ -7,8 +7,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
 
-    - name: vuepress-deploy
-      uses: pagnkelly/eslint-plugin-mpx@master
+   - name: Vuepress deploy
+      uses: jenkey2011/vuepress-deploy@1.6.1
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         TARGET_REPO: pagnkelly/eslint-plugin-mpx
