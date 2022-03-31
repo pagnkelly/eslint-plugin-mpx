@@ -21,39 +21,10 @@ const uncategorizedExtensionRule = rules.filter(
 const deprecatedRules = rules.filter((rule) => rule.meta.deprecated)
 
 const sidebarCategories = [
-  { title: 'Base Rules', categoryIds: ['base'] },
+  { title: 'base', categoryIds: ['base'] },
   {
-    title: 'Priority A: Essential',
-    categoryIds: ['vue3-essential', 'essential']
-  },
-  {
-    title: 'Priority A: Essential for Vue.js 3.x',
-    categoryIds: ['vue3-essential']
-  },
-  { title: 'Priority A: Essential for Vue.js 2.x', categoryIds: ['essential'] },
-  {
-    title: 'Priority B: Strongly Recommended',
-    categoryIds: ['vue3-strongly-recommended', 'strongly-recommended']
-  },
-  {
-    title: 'Priority B: Strongly Recommended for Vue.js 3.x',
-    categoryIds: ['vue3-strongly-recommended']
-  },
-  {
-    title: 'Priority B: Strongly Recommended for Vue.js 2.x',
-    categoryIds: ['strongly-recommended']
-  },
-  {
-    title: 'Priority C: Recommended',
-    categoryIds: ['vue3-recommended', 'recommended']
-  },
-  {
-    title: 'Priority C: Recommended for Vue.js 3.x',
-    categoryIds: ['vue3-recommended']
-  },
-  {
-    title: 'Priority C: Recommended for Vue.js 2.x',
-    categoryIds: ['recommended']
+    title: 'Essential',
+    categoryIds: ['mpx-essential']
   }
 ]
 
@@ -129,8 +100,8 @@ module.exports = {
   },
 
   base: '/',
-  title: 'eslint-plugin-vue',
-  description: 'Official ESLint plugin for Vue.js',
+  title: 'eslint-plugin-mpx',
+  description: 'Mpx的官方ESLint插件',
   evergreen: true,
   head: [['link', { rel: 'icon', href: '/favicon.png' }]],
 
@@ -142,37 +113,33 @@ module.exports = {
   },
 
   themeConfig: {
-    repo: 'vuejs/eslint-plugin-vue',
-    docsRepo: 'vuejs/eslint-plugin-vue',
+    repo: 'mpx-ecology/eslint-plugin-mpx',
+    docsRepo: 'mpx-ecology/eslint-plugin-mpx',
     docsDir: 'docs',
     docsBranch: 'master',
-    editLinks: true,
-    lastUpdated: true,
-
     nav: [
-      { text: 'User Guide', link: '/user-guide/' },
-      { text: 'Developer Guide', link: '/developer-guide/' },
-      { text: 'Rules', link: '/rules/' },
-      { text: 'Demo', link: 'https://mysticatea.github.io/vue-eslint-demo' }
+      { text: '用户指南', link: '/user-guide/' },
+      { text: '开发指南', link: '/developer-guide/' },
+      { text: '规则', link: '/rules/' }
     ],
 
     sidebar: {
       '/rules/': [
         '/rules/',
-
         // Rules in each category.
-        ...categorizedRules,
+        ...categorizedRules
 
         // Rules in no category.
-        ...extraCategories
+        // ...extraCategories
       ],
 
       '/': ['/', '/user-guide/', '/developer-guide/', '/rules/']
     },
-
-    algolia: {
-      apiKey: 'b2b69365da747a9a9635cda391317c36',
-      indexName: 'eslint-plugin-vue'
-    }
+    search: true,
+    searchMaxSuggestions: 10
+    // algolia: {
+    //   apiKey: 'b2b69365da747a9a9635cda391317c36',
+    //   indexName: 'eslint-plugin-vue'
+    // }
   }
 }

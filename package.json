@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-mpx",
-  "version": "0.0.18",
+  "version": "0.0.21",
   "description": "Official ESLint plugin for Mpx.js",
   "main": "lib/index.js",
   "scripts": {
@@ -36,10 +36,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pagnkelly/eslint-plugin-mpx.git"
+    "url": "git+https://github.com/mpx-ecology/eslint-plugin-mpx.git"
   },
   "bugs": {
-    "url": "https://github.com/pagnkelly/eslint-plugin-mpx/issues"
+    "url": "https://github.com/mpx-ecology/eslint-plugin-mpx/issues"
   },
   "engines": {
     "node": ">=8.10"
@@ -48,8 +48,8 @@
     "eslint": "^6.2.0 || ^7.0.0"
   },
   "dependencies": {
+    "mpx-eslint-parser": "0.0.7",
     "eslint-utils": "^2.1.0",
-    "mpx-eslint-parser": "0.0.5",
     "natural-compare": "^1.4.0",
     "semver": "^7.3.2",
     "vue-eslint-parser": "^7.1.0"
@@ -76,5 +76,11 @@
     "typescript": "^3.9.5",
     "vue-eslint-editor": "^1.1.0",
     "vuepress": "^1.4.1"
+  },
+  "homepage": "https://github.com/mpx-ecology/eslint-plugin-mpx#readme",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib",
+    "test": "tests"
   }
 }
